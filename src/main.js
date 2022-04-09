@@ -22,6 +22,7 @@ import auth from './libs/auth'
 const emitter = mitt()
 import adminstore from './store/admin'
 import metadata from './libs/meta'
+firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
 const app = createApp(App).use(store)
 app.config.globalProperties.auth = auth
 app.config.globalProperties.firebase = firebase
